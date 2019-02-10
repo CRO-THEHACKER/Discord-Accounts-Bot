@@ -11,20 +11,17 @@ from pynput.keyboard import Key, Controller
 
 keyboard = Controller()
 
-f = open('config.csv')
-csv_f = csv.reader(f)
-for row in csv_f:
-    username = row[0]
-    password = row[1]
-    email = row[2]
+username = input('Username: ')
+email = input('Email: ')
+password = input('Password: ')
 
 time.sleep(0.5)
 keyboard.press(Key.cmd)
 keyboard.release(Key.cmd)
 time.sleep(0.5)
-for chrome in "Chrome":
-    keyboard.press(chrome)
-    keyboard.release(chrome)
+for tor in "Tor":
+    keyboard.press(tor)
+    keyboard.release(tor)
     time.sleep(0.12)
 time.sleep(3)
 keyboard.press(Key.enter)
